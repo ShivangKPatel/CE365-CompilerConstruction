@@ -19,7 +19,8 @@ int validateString(struct transitionTable* Entries, int initalState, char accept
                     break;         
                }
           }
-          currState = Entries[(currState*pos)-1].outState;
+          currState = Entries[((currState-1)*2)+pos].outState;
+          printf("Current State : %d", currState);
      }
 
      int acceptingStateLen = *(&acceptingState + 1) - acceptingState;
@@ -71,6 +72,7 @@ int main(){
                tableCounter++;
           }
      }
+
 
      printf("Input string : ");
      scanf("%s", inputStr);
