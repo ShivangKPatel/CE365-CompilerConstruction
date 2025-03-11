@@ -37,3 +37,4 @@ int main(){
      // printf("%ld", strlen(str));
      validateString(str, strlen(str));
 }
+
